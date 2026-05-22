@@ -3,7 +3,7 @@ from animal import Animal
 
 
 #Subclass Dog
-class Dog:
+class Dog(Animal):
     def __init__(self, species, name):
         super().__init__(species = "Canis familiaris")
         self.subspecies = species
