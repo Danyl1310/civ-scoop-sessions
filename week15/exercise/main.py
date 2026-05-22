@@ -1,5 +1,4 @@
 import json
-
 # Look at this function -- it takes a file that it assumes is json and parses it
 # Experiment with giving it files and see what it returns.
 # Remember that you can run files in python 'interactively' with `python -i filename.py`
@@ -10,3 +9,7 @@ def read_file(filename):
         except json.JSONDecodeError:
             print("JSONDecode error! Check your formatting")
             return []
+        except FileNotFoundError:
+            print("Json not found.")
+
+print(read_file("exercise/fixture.json"))
